@@ -22,9 +22,7 @@ public class MyCalendar {
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 
 		switch (c.get(Calendar.DAY_OF_WEEK)) {
-		case Calendar.SATURDAY:
-			c.add(Calendar.DATE, 2);
-			break;
+
 		case Calendar.SUNDAY:
 			c.add(Calendar.DATE, 1);
 			break;
@@ -32,7 +30,6 @@ public class MyCalendar {
 		case Calendar.MONDAY:
 			// Don't need to do anything on a Monday
 			// included only for completeness
-			c.add(Calendar.DATE, 2);
 
 			break;
 
@@ -52,6 +49,9 @@ public class MyCalendar {
 			c.add(Calendar.DATE, -4);
 			break;
 
+		case Calendar.SATURDAY:
+			c.add(Calendar.DATE, 2);
+			break;
 		}
 
 		// Add the Monday to the output
